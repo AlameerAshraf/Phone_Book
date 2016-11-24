@@ -64,12 +64,10 @@ void ReadAllRecordsFromFile (char FileName[])
     while(fgets(Data, sizeof(Data), PointerToFile))
     {
 
-        PointerToRead = (struct Record*) malloc(sizeof(struct Record));
+        PointerToRead = CreateSortedNode ();
         sscanf(Data , "%s %s %s",PointerToRead -> C.Name , PointerToRead -> C.Address , PointerToRead -> C.Phone);
 
-        PointerToRead -> Next = NULL ; //On The Air Node !
-        PointerToRead -> Prev = NULL ; //On The Air Node !
-
+        
         if(Head == NULL)
         {
             TempPointer = Head = PointerToRead;
