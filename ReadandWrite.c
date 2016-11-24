@@ -65,9 +65,9 @@ void ReadAllRecordsFromFile (char FileName[])
     {
 
         PointerToRead = CreateSortedNode ();
-        sscanf(Data , "%s %s %s",PointerToRead -> C.Name , PointerToRead -> C.Address , PointerToRead -> C.Phone);
+        sscanf(Data , "%s %s %s %s",PointerToRead -> C.FirstName , PointerToRead -> C.SecondName , PointerToRead -> C.Address , PointerToRead -> C.Phone);
 
-        
+
         if(Head == NULL)
         {
             TempPointer = Head = PointerToRead;
