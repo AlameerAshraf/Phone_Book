@@ -1,5 +1,5 @@
 // add a new node in the linked list 
-int AddNode()
+int AddNode() // alameer ashraf 
 {
     struct Record* Pointer ;
     int AdditionFlag = 0 ; 
